@@ -1,0 +1,148 @@
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card{
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.name{
+    /* display: none; */
+    color: white;
+    text-transform: uppercase; 
+}
+
+.desc{
+    display: none;
+    color: white;
+}
+
+.img_div{
+    position: relative;
+    
+    background-color: black;
+    border-radius: 15px;
+    /* height: 0%; */
+    /* width: ; */
+}
+
+.img{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+}
+
+
+.card:hover .desc {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* height: 4rem; */
+}
+
+.card:hover .img{
+    filter: brightness(30%);
+    
+}
+
+.like_view{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(185, 182, 182);
+    padding: 2px 5px;
+    font-size: 0.75rem;
+}
+
+.views{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.card:hover .button{
+    display: block;
+}
+
+.btn_div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button {
+    cursor: pointer;
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+     background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   position: absolute;
+   top: 40%;
+   /* left: 34%; */
+   display: none;
+   }
+   
+   
+   .button:active {
+    transform: translate(0em, 0.2em);
+   }
+
+
+   
+@media only screen and (max-width:1024px){
+    .container{
+       padding: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    /* .button{
+        left: 20%;
+        
+    } */
+}
+
+
+@media only screen and (max-width:776px) {
+    .container{
+        padding: 1rem;
+         grid-template-columns: 1fr 1fr;
+         gap: 1rem;
+     }
+    /* .button{
+        top: 30%;
+    } */
+}
+
+@media only screen and (max-width:576px){
+    .button{
+        display: none;
+    }
+
+    .card:hover .button{
+        display: none;
+    }
+}

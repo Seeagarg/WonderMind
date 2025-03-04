@@ -1,0 +1,137 @@
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  font-family: "Roboto", serif;
+  background-color: black;
+  /* border-bottom: 1px solid #0b2e4a; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  box-shadow: rgb(213, 215, 218) 0px 20px 30px -10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+  z-index: 99;
+}
+
+.logo{
+  padding: 1rem 2rem;
+  height: 100%;
+  color: white;
+  font-size: 2.5rem;
+  font-weight:500;
+  animation: textAnimation 3s ease-in-out;
+  height: 6rem;
+}
+
+.logo img{
+height: 100%;
+}
+
+.tabs{
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.tab{
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+
+
+.active {
+
+--primary: #4afeec;
+--secondary: #aff9ba;
+
+position: relative;
+
+border-radius: 0.6em;
+
+transition: all 0.3s;
+line-height: 1.4em;
+
+border: 2px solid var(--primary);
+background: linear-gradient(to right, rgba(79, 254, 236, 0.1) 1%, transparent 40%, transparent 60%, rgba(79, 254, 236, 0.1) 100%);
+color: var(--primary);
+box-shadow: inset 0 0 10px rgba(79, 254, 236, 0.4), 0 0 9px 3px rgba(79, 254, 236, 0.1);
+}
+
+.active:hover {
+color: #aff9ba;
+box-shadow: inset 0 0 10px rgba(79, 254, 236, 0.6), 0 0 9px 3px rgba(79, 254, 236, 0.2);
+}
+
+.active:before {
+content: "";
+position: absolute;
+/* left: -4em; */
+width: 4em;
+height: 100%;
+top: 0;
+transition: transform 0.4s ease-in-out;
+background: linear-gradient(to right, transparent 1%, rgba(175, 249, 186, 0.1) 40%, rgba(175, 249, 186, 0.1) 60%, transparent 100%);
+}
+
+.btn:hover:before {
+transform: translateX(15em);
+}
+
+
+
+
+.icon{
+color: white;
+padding: 2rem;
+
+cursor: pointer;
+display: block;
+}
+
+
+
+
+
+
+
+
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+    /* background: linear-gradient(90deg, #feb47b, #ff7e5f, #feb47b); Change gradient color */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.sidebar{
+  background-color: #001932;
+  scrollbar-width: none !important;
+}
+
+
+@media only screen and (max-width:778px){
+  .tabs{
+    display: none;
+  }
+
+  .icon{
+    display: block;
+  }
+}
