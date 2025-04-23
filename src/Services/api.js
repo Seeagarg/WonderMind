@@ -1,6 +1,6 @@
 // const base_url = 'http://localhost:5151'
-// const base_url = ``
-const base_url = `http://84.247.182.44:5151`
+const base_url = `https://wondermind.in`
+// const base_url = `http://84.247.182.44:5151`
 export {base_url}
 
 
